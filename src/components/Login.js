@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import {
   TextField,
   Button,
@@ -18,56 +18,46 @@ const useStyles = makeStyles({
   },
 });
 
-const classes = useStyles();
-class App extends Component {
-  state = {
-    username: '',
-    password: ''
-  }
+
+const login = (e) => {
+  e.preventDefault()
+  document.cookie = "loggedIn=true;max-age=60*1000";
   
+  window.location.replace("/")
+}
 
-  handleTextChange = (e) => {
-    const state = { ...this.state }
-    state[e.target.name] = e.target.value
-    this.setState(state)
-  }
-
-  login = (e) => {
-    e.preventDefault()
-   document.cookie = "loggedIn=true;max-age=60*1000";
-
-    window.location.replace("/")
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <Container maxWidth="sm">
-          <form className="login-form" onSubmit={this.login}>
-            <TextField
-              required
-              onChange={this.handleTextChange}
-              value={this.state.username}
-              name="username"
-              label="Username"
-              type="text" />
-            <TextField
-              required
-              onChange={this.handleTextChange}
-              value={this.state.password}
-              name="password"
-              label="Password"
-              type="password" />
-            <Button
-              type="submit"
-              className={classes.loginButton}
-              variant="contained"
-              color="primary">Login</Button>
-          </form>
-        </Container>
-      </div>
-    );
-  }
+const App = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const classes = useStyles();
+  
+  return (
+    <div className="App">
+      <Container maxWidth="sm">
+        <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={login}>
+          <TextField
+            required
+            onChange={({ target }) => setUsername(target.value)}
+            value={username}
+            name="username"
+            label="Username"
+            type="text" />
+          <TextField
+            required
+            onChange={({ target }) => setPassword(target.value)}
+            value={password}
+            name="password"
+            label="Password"
+            type="password" />
+          <Button
+            type="submit"
+            className={classes.loginButton}
+            variant="contained"
+            color="primary">Login</Button>
+        </form>
+      </Container>
+    </div>
+  )
 }
 
 export default App;
