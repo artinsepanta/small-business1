@@ -3,7 +3,7 @@ import Home from '../components/Home'
 
 const mapStateToProps = (state) => {
   return {
-    UrgentCares : state.UrgentCare
+    UrgentCares : state.UrgentCares
   }
 }
 

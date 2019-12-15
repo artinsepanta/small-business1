@@ -1,26 +1,26 @@
 [
   {
     "id":1,
-    "UrgentCare":"Urgent & Family Care At Avery Ranch",
+    "name":"Urgent & Family Care At Avery Ranch",
     "description":"Urgent & Family Care at Avery Ranch has an on-site laboratory and access to most major laboratory services.Urgent & Family Care at Avery Ranch has met all criteria for Laboratory Accreditation by COLA , a national healthcare accreditation organization.",
 
-    "addressaddress":"10625 Parmer Ln Ste D-400 Austin, TX 78717 ",
-    " hours":"8 am - 8 pm"
+    "location":"10625 Parmer Ln Ste D-400 Austin, TX 78717 ",
+    "hours":"8 am - 8 pm"
   },
 
   {
     "id":2,
-    "UrgentCare":"Chisholm Trail Pediatrics-Georgetown",
+    "name":"Chisholm Trail Pediatrics-Georgetown",
     "description":"Chisholm Trail Pediatrics was created in 1990 when Dr. David Ramsey made the decision to move to Georgetown. The company was incorporated in 2001 and has continued to grow and serve Georgetown and the surrounding areas with quality care in a friendly environment. In 2017, after looking to practice in a less corporate fashion, Dr. Andrew Cavanagh joined CTP in Georgetown. Upon Dr. Ramsey's retirement, Dr. Cavanagh purchased the practice and now sees patients at both Georgetown and Round Rock locations.",
     "location":"600 High Tech Dr Georgetown, TX 78626" ,
-    " hours":"8 am - 5 pm"
+    "hours":"8 am - 5 pm"
   },
   
   {
     "id": 3,
-    "UrgentCare":"Whitestone Pediatrics" ,
+    "name":"Whitestone Pediatrics" ,
     "description":"With FetchMD On-Demand Urgent Care, you don't have to sit for hours in the urgent care waiting room. We bring the clinic to you! Just request a visit through our free app and one of our clinicians will come to you, complete with a clinic on wheels! Use FetchMD for things like: * General Illness (cough and cold, viral illness, fever or flu-like symptoms) * Musculoskeletal (sprains, strains, and joint pain) * Skin (skin rashes and infections, lacerations) * Ear, Nose & Throat (sinusitis, sore throat or strep, earaches, upper respiratory infections, seasonal allergies) * Gastrointestinal (nausea, vomiting, diarrhea, urinary tract infections) * Wellness (sports and school physicals)" ,
     "location":"Austin, TX 78758",
-    " hours":"8 am -8 pm"
+    "hours":"8 am -8 pm"
   }
 ]

@@ -19,17 +19,17 @@ const useStyles = makeStyles({
 });
 
 
-const login = (e) => {
-  e.preventDefault()
-  document.cookie = "loggedIn=true;max-age=60*1000";
-  
-  window.location.replace("/")
-}
 
 const App = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const classes = useStyles();
+  const login = (e) => {
+    e.preventDefault()
+    document.cookie = `user=${username};max-age=60*1000*5`;
+    
+    window.location.replace("/Listing")
+  }
   
   return (
     <div className="App">

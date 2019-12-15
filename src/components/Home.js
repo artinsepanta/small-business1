@@ -1,21 +1,22 @@
 import React from 'react'
 import { Card, CardContent, CardActions, Divider } from '@material-ui/core'
-//import UrgentCares from '../UrgentCares.json'
-import { Link } from 'react-router-dom'
+import UrgentCares from '../UrgentCares.json'
+import { Link } from 'react-router-dom';
 
 const Home = (props) => {
-
+console.log(UrgentCares)
     return (
         <div className="card-container">
-            {props.UrgentCares.map((UrgentCare, idx) => (
+            {UrgentCares.map((UrgentCare, idx) => (
                 <Card key={idx} className="card">
                     <CardContent className="text-gray">
                         <span>{UrgentCare.name.toUpperCase()}</span>
-                        <ul>
+                         <ul>
                             <li>Address: {UrgentCare.location["address"]}</li>
     
                             <li>Hours: {UrgentCare.hours["address"]}</li>
-                        </ul>
+                        </ul> 
+
                     </CardContent>
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>

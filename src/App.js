@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation'
+import NavListing from './components/NavListing'
 import Router from './Router'
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
@@ -10,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation />
+      <NavListing/>
       <Router />
     </BrowserRouter>
   );
