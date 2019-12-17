@@ -1,10 +1,12 @@
-import GoogleMapReact from 'google-map-react';
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import { Container } from "@material-ui/core";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 const GoogleMap = props => {
+
+  const id = props.match.params.id
+  const UrgentCare= props.UrgentCares.find(u => u.id == id)
   const AnyReactComponent = ({ text }) => (
     <div>
       <LocationOnIcon className="text-red" />
@@ -13,8 +15,8 @@ const GoogleMap = props => {
 
   const defaultProps = {
     center: {
-      lat: props.lat,
-      lng: props.lng
+      lat: UrgentCare.location.latitude,
+      lng: UrgentCare.location.longitude 
     },
     zoom: 11
   };

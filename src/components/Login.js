@@ -4,7 +4,10 @@ import {
   Button,
   Container
 } from '@material-ui/core'
+import { Redirect } from 'react-router'
 import { makeStyles } from '@material-ui/core/styles';
+//import Listing from './Listing'
+//import Login from '../containers/Login';
 
 const useStyles = makeStyles({
   loginButton: {
@@ -20,15 +23,17 @@ const useStyles = makeStyles({
 
 
 
-const App = () => {
+  const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const classes = useStyles();
-  const login = (e) => {
+  const login = (e) =>{ 
     e.preventDefault()
+   
     document.cookie = `user=${username};max-age=60*1000*5`;
     
-    window.location.replace("/Listing")
+    window.location.replace("/listing")
+   
   }
   
   return (
@@ -58,6 +63,6 @@ const App = () => {
       </Container>
     </div>
   )
-}
+ }
 
-export default App;
+  export default Login;

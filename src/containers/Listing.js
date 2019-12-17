@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Listing from '../components/Listing'
-import { removeUrgentCare } from '../redux/actions'
+import { removeUrgentCare } from '../Redux/actions'
 
 const mapStateToProps = (state) => {
     return {

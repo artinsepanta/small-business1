@@ -7,7 +7,7 @@ import {
     DialogTitle
 } from '@material-ui/core'
 
-class AddListing extends Component {
+class AddUrgentCare extends Component {
     state = {
         open: false,
         name: '',
@@ -30,7 +30,7 @@ class AddListing extends Component {
         payload.id = this.props.UrgentCareTotal + 1
         delete payload.open
         console.log("THE URGENTCARE", payload)
-        this.props.addListing(payload)
+        this.props.AddUrgentCare(payload)
         this.setState({ open: false })
     }
 
@@ -52,7 +52,7 @@ class AddListing extends Component {
                     <h1>Add URGENTCARE:</h1>
                     <Button
                         variant="contained"
-                        className="add-listing"
+                        className="add-UrgentCare"
                         onClick={this.toggleDialog}
                     >
                         Add UrgentCare
@@ -100,4 +100,4 @@ class AddListing extends Component {
     }
 }
 
-export default AddListing
+export default AddUrgentCare
