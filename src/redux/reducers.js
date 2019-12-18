@@ -31,7 +31,7 @@ const user = (state = null, action) => {
     }
 }
 
-const urgentCares = (state = [], action) => {
+const UrgentCares = (state = [], action) => {
     switch(action.type) {
         case 'ADD_URGENTCARE':
             return [ ...state, action.value ]
@@ -43,4 +43,4 @@ const urgentCares = (state = [], action) => {
             return state
     }
 }
-export default combineReducers({ initialState, user, urgentCares })
+export default combineReducers({ initialState, user, UrgentCares })

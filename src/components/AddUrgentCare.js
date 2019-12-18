@@ -30,7 +30,7 @@ class AddUrgentCare extends Component {
         payload.id = this.props.UrgentCareTotal + 1
         delete payload.open
         console.log("THE URGENTCARE", payload)
-        this.props.AddUrgentCare(payload)
+        this.props.addUrgentCare(payload)
         this.setState({ open: false })
     }
 

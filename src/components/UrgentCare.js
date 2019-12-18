@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Paper, Chip } from '@material-ui/core';
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-//import NavListing from './NavListing'
+import UrgentCares from '../UrgentCares.json'
 
 
 const UrgentCare = (props) => {
